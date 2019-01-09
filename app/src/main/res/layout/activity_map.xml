@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/layoutwhite"
+        android:id="@+id/map_activity_srch_relative_layout">
+
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/activity_map_img_view"
+            android:background="@drawable/ic_src" />
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:layout_toRightOf="@id/activity_map_img_view"
+            android:id="@+id/activity_map_edit_srch_text"
+            android:hint="Enter city name, zip code, Address"
+            android:imeOptions="actionSearch"
+            android:layout_toEndOf="@id/activity_map_img_view" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/map_activity_srch_relative_layout"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/activity_map_gps_icon"
+        android:src="@drawable/ic_gps"
+        />
+
+</RelativeLayout>
